@@ -111,6 +111,11 @@ function removeTodo(element) {
 
   storedTodos.forEach((todo) => {
     if (todo.id === element.parentElement.parentElement.id) {
+      if (todo.done === false) {
+        alert('Ops, tarefa não concluída!');
+        return;
+      }
+
       const index = storedTodos.findIndex(function (todo) {
         const paragraph =
           element.parentElement.parentElement.children[0].innerHTML;
