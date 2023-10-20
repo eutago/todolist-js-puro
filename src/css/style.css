@@ -100,6 +100,9 @@ body {
 .text-todo {
   font: 500 1.25rem/16px var(--font);
   color: #000000;
+  word-break: break-all;
+  word-wrap: break-word;
+  line-height: 24px;
 }
 
 .btn-remove-todo,
@@ -131,4 +134,64 @@ body {
 
 .done {
   text-decoration: 2px line-through #000000;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 480px;
+  }
+
+  .input-add-todo {
+    width: 350px;
+    height: 60px;
+  }
+
+  .todos-container {
+    grid-template-columns: 450px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 400px;
+  }
+
+  .input-add-todo {
+    width: 300px;
+    height: 60px;
+  }
+
+  .todos-container {
+    grid-template-columns: 350px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    padding: 120px 16px 60px 16px;
+    width: 100%;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .input-add-todo,
+  .btn-add-todo {
+    width: 90%;
+    height: 60px;
+  }
+
+  .todos-container {
+    grid-template-columns: 90%;
+    grid-auto-rows: 120px;
+  }
+
+  .todo {
+    text-align: center;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: space-around;
+  }
 }
