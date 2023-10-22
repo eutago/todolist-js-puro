@@ -80,7 +80,7 @@ body {
   background-color: #ffffff;
   border-radius: 5px;
   display: none;
-  grid-template-columns: 490px;
+  grid-template-columns: minmax(490px, auto);
   grid-auto-rows: 75px;
   justify-content: center;
   align-content: center;
